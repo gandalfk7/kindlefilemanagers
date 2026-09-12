@@ -6,6 +6,7 @@
 
 APP_ID="com.kbarni.filemanagers"
 MAIN_DIR="/mnt/us/filemanagers"
+LOCAL_DIR="/mnt/us/extensions/filemanagers"
 APP_DIR="$MAIN_DIR/app"
 TARGET_DIR="/var/local/mesquite/filemanagers"
 APPREG_DB="/var/local/appreg.db"
@@ -21,9 +22,9 @@ if [ -e /lib/ld-linux-armhf.so.3 ]; then
 fi
 
 if [ -e "$BINARY" ]; then
-  cp "$BINARY" /var/local/kmc/Utild
-  chmod +x /var/local/kmc/Utild
-  /var/local/kmc/Utild &
+  cp "$BINARY" $LOCAL_DIR/utild_bin/Utild
+  chmod +x $LOCAL_DIR/utild_bin/Utild
+  $LOCAL_DIR/utild_bin/Utild &
 fi
 
 log "Scriptlet starting"
