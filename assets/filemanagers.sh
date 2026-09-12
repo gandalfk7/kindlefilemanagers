@@ -22,7 +22,7 @@ if [ -e /lib/ld-linux-armhf.so.3 ]; then
 fi
 
 # Create the utild bin target folder in a writable location
-mkdir $LOCAL_DIR/utild_bin
+mkdir -p $LOCAL_DIR/utild_bin
 
 if [ -e "$BINARY" ]; then
   cp "$BINARY" $LOCAL_DIR/utild_bin/Utild
