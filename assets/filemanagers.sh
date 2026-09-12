@@ -21,6 +21,10 @@ if [ -e /lib/ld-linux-armhf.so.3 ]; then
   BINARY="$MAIN_DIR/utild/UtildHF"
 fi
 
+# Create the utild target folder
+
+mkdir $LOCAL_DIR/utild_bin
+
 if [ -e "$BINARY" ]; then
   cp "$BINARY" $LOCAL_DIR/utild_bin/Utild
   chmod +x $LOCAL_DIR/utild_bin/Utild
